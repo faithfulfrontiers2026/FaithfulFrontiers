@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <meta name="theme-color" content="#071827"/>
+  <title>Trust Center | Faithful Frontiers</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body class="trust-page">
+  <header class="site-header solid">
+    <a class="brand" href="index.html"><img src="faithful-frontiers-logo.png" alt="Faithful Frontiers"/></a>
+    <nav class="nav"><a href="index.html#experience">Experience</a><a href="index.html#planner">AI Planner</a><a href="index.html#groups">For Groups</a><a class="active-link" href="trust.html">Trust Center</a><a href="index.html#about">About</a></nav>
+    <div class="nav-actions"><a class="primary-btn small" href="index.html#planner">Plan a journey</a></div>
+  </header>
+  <main>
+    <section class="trust-hero section-shell">
+      <span class="eyebrow light">FAITHFUL FRONTIERS TRUST CENTER</span>
+      <h1>Trust is part of the product.</h1>
+      <p>Our security approach is designed for a travel platform that may handle identity data, booking details, payment-adjacent workflows and group logistics. This prototype documents the target architecture and operating principles—not completed certifications.</p>
+      <div class="trust-badges"><span>Least privilege</span><span>Data minimization</span><span>Encryption</span><span>Resilience</span><span>Incident readiness</span><span>Vendor governance</span></div>
+    </section>
+
+    <section class="section-shell trust-nav"><a href="#architecture">Architecture</a><a href="#privacy">Privacy & data</a><a href="#identity">Identity & access</a><a href="#resilience">Resilience</a><a href="#incident">Incident response</a><a href="#governance">Governance</a></section>
+
+    <section id="architecture" class="section-shell trust-block">
+      <div class="trust-title"><span>01</span><div><small>FOUNDATION</small><h2>Well-architected cloud security</h2></div></div>
+      <p class="trust-lede">The target environment follows AWS Well-Architected security and reliability principles: explicit identity boundaries, protected data, observable systems, automated safeguards and tested recovery.</p>
+      <div class="architecture-map">
+        <div class="arch-node primary"><b>Application</b><small>Protected web & API layer</small></div>
+        <span class="arrow">→</span><div class="arch-node"><b>Identity</b><small>RBAC + MFA + least privilege</small></div>
+        <span class="arrow">→</span><div class="arch-node"><b>Data</b><small>Encrypted with managed keys</small></div>
+        <span class="arrow">→</span><div class="arch-node"><b>Telemetry</b><small>Centralized + redacted logs</small></div>
+      </div>
+    </section>
+
+    <section id="privacy" class="section-shell trust-block two-col">
+      <div><div class="trust-title"><span>02</span><div><small>PRIVACY & DATA</small><h2>Collect less. Protect what remains.</h2></div></div><p>Design data flows so personal information is limited to legitimate travel purposes. Sensitive values should not be copied into logs, debugging output or unnecessary analytics.</p></div>
+      <div class="control-list"><div><b>PII minimization</b><span>Mask or omit sensitive fields from logs and operational telemetry.</span></div><div><b>Encryption</b><span>Protect data in transit and at rest using managed encryption and key controls.</span></div><div><b>Retention</b><span>Define retention periods by data type and support documented deletion workflows.</span></div><div><b>DLP</b><span>Use detection controls to identify accidental exposure of personal data.</span></div></div>
+    </section>
+
+    <section id="identity" class="trust-dark"><div class="section-shell trust-block two-col reverse"><div class="identity-card"><div><span>ROLE</span><b>Trip organizer</b><small>Create trips, approve bookings</small></div><div><span>ROLE</span><b>Traveler</b><small>View trip, update own profile</small></div><div><span>ROLE</span><b>Advisor</b><small>Coordinate assigned journeys</small></div><div><span>ROLE</span><b>Admin</b><small>Restricted privileged operations</small></div></div><div><div class="trust-title light-title"><span>03</span><div><small>IDENTITY & ACCESS</small><h2>Access follows the job—not convenience.</h2></div></div><p>Use role-based access control, MFA for privileged activity, strong provisioning and offboarding processes, and periodic access reviews. Public endpoints should expose only what is intentionally public.</p></div></div></section>
+
+    <section id="resilience" class="section-shell trust-block">
+      <div class="trust-title"><span>04</span><div><small>RESILIENCE</small><h2>Design for failure before failure chooses the date.</h2></div></div>
+      <p class="trust-lede">The target recovery model separates everyday availability from regional disaster recovery and long-term cold storage.</p>
+      <div class="resilience-grid"><div class="res-card"><span>HOT</span><h3>Primary + read replica</h3><p>Production runs across resilient infrastructure, with a read replica in another availability zone to reduce single-zone dependency.</p><small>Fastest recovery path</small></div><div class="res-card"><span>WARM</span><h3>Secondary region</h3><p>Maintain recoverable application and data capacity in a separate U.S. region for a larger regional outage.</p><small>Controlled scale-up</small></div><div class="res-card"><span>COLD</span><h3>Protected archive</h3><p>Maintain lower-cost protected backups for long-term recovery, retention and ransomware-resilient restore points.</p><small>Lowest standby cost</small></div></div>
+    </section>
+
+    <section id="incident" class="section-shell trust-block two-col"><div><div class="trust-title"><span>05</span><div><small>INCIDENT RESPONSE</small><h2>Prepare → detect → contain → recover → learn.</h2></div></div><p>Security incidents need defined ownership, escalation, communication and evidence handling before an event occurs. The target program aligns response playbooks with cloud-native security tooling and outside support where appropriate.</p></div><ol class="response-steps"><li><b>Prepare</b><span>Contacts, roles, access, logging, runbooks</span></li><li><b>Detect & analyze</b><span>Alerts, triage, severity, scope</span></li><li><b>Contain & eradicate</b><span>Limit damage, remove root cause</span></li><li><b>Recover</b><span>Restore trusted operations</span></li><li><b>Learn</b><span>Post-incident review and control improvements</span></li></ol></section>
+
+    <section id="governance" class="trust-governance"><div class="section-shell trust-block"><div class="trust-title light-title"><span>06</span><div><small>GOVERNANCE</small><h2>Security claims should match actual behavior.</h2></div></div><div class="gov-grid"><div><b>Vendor oversight</b><p>Review cloud, booking, payment, email and AI vendors on a repeatable cadence.</p></div><div><b>Privacy alignment</b><p>Keep public notices synchronized with implemented controls and actual retention practices.</p></div><div><b>Testing</b><p>Define authorized scanning, penetration testing, remediation and retesting cycles.</p></div><div><b>Evidence readiness</b><p>Structure controls and records to support future SOC 2 and other compliance work.</p></div></div><div class="prototype-note"><b>Prototype disclosure</b><p>Faithful Frontiers is presented here as a concept/prototype. References to frameworks and target controls describe design intent and recommended implementation direction; they do not represent a completed audit or certification.</p></div></div></section>
+  </main>
+  <footer><div class="footer-brand"><img src="faithful-frontiers-logo.png" alt="Faithful Frontiers"/><p>Travel Further. Live Fuller.</p></div><div><b>Return</b><a href="index.html">Home</a><a href="index.html#planner">AI Planner</a></div><p class="copyright">© 2026 Faithful Frontiers. Prototype concept.</p></footer>
+  <script src="script.js"></script>
+</body>
+</html>
